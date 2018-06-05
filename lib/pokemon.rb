@@ -1,9 +1,5 @@
 class Pokemon
 
-#  def initialize(attributes)
-#    attributes.each {|key,value| self.send(("#{key}="), value)}
-#  end
-
 def initialize(name: nil, type: nil, db: nil)
   local_variables.each do |k|
     v = eval(k.to_s)
