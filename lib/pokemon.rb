@@ -18,8 +18,7 @@ class Pokemon
   end
 
   def alter_hp(hp, db)
-    strings = [hp, @name]
     ins = db.prepare("UPDATE pokemon SET hp = ? WHERE name=?")
-    strings.each do |s| ins.execute(s)
+    ins.execute(hp, self.name)
   end
 end
