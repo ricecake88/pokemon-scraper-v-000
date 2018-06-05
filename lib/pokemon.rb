@@ -17,5 +17,4 @@ class Pokemon
       Pokemon.instance_variable_set(:@id, pokemon[0][0])
       Pokemon.instance_variable_set(:@name, pokemon[0][1])
       Pokemon.instance_variable_set(:@type, pokemon[0][2])
-  end
 end
