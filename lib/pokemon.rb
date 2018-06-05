@@ -4,7 +4,7 @@ class Pokemon
   def initialize(name, type, db)
     @name = name
     @type = type
-    @database = db
+    @db = db
   end
   
   def save(name, type)
