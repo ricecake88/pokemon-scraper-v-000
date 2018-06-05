@@ -10,6 +10,7 @@ class Pokemon
   end
   
   def self.find(pk_id, db)
+    binding.pry
     db.execute("SELECT * FROM pokemon WHERE id = ?;", pk_id) do |row|
       Pokemon.new(row[1], row[2], db)
     end
