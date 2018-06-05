@@ -16,7 +16,7 @@ class Pokemon
     db.execute("SELECT * FROM pokemon WHERE id = ?", pk_id) do |row|
       Pokemon.instance_variable_set(:@id, row[0])
       Pokemon.instance_variable_set(:@name, row[1])
-      Pokemon.instance_variable_set(:type, row[2])
+      Pokemon.instance_variable_set(:@type, row[2])
     end
   end
 end
