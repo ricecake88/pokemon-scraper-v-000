@@ -17,4 +17,6 @@ class Pokemon
     Pokemon.new({:id => pokemon[0][0], :name=>pokemon[0][1], :type=>pokemon[0][2]})
   end
 
+  def alter_hp(hp, db)
+    db.execute("UPDATE pokemon SET hp = ? WHERE name="?", hp, db)
 end
