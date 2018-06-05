@@ -8,10 +8,10 @@ class Pokemon
   end
   
   def save(name, type)
-    @database.execute("INSERT INTO ?(name, type) VALUES(?,?);", @name, @type, @db)
+    @db.execute("INSERT INTO ?(name, type) VALUES(?,?);", @name, @type, @db)
   end
   
   def find(pk_id)
-    database_execution.execute("SELECT * FROM ? WHERE id = ?;", @database, pk_id)
+    database_execution.execute("SELECT * FROM ? WHERE id = ?;", @db, pk_id)
   end
 end
