@@ -13,7 +13,7 @@ class Pokemon
   
   def self.find(pk_id, db)
     db.execute("SELECT * FROM pokemon WHERE id = ?;", pk_id) do |row|
-      row[]
-    
+      row['id']
+    end
   end
 end
