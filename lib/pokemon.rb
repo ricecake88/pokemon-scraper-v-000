@@ -13,7 +13,8 @@ class Pokemon
   
   def self.find(pk_id, db)
     db.execute("SELECT * FROM pokemon WHERE id = ?;", pk_id) do |row|
-      Pokemon.new
+      pk = Pokemon.new(row[1], row[2])
     end
+    pk
   end
 end
