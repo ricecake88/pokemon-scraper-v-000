@@ -13,10 +13,9 @@ class Pokemon
   end
   
   def self.find(pk_id, db)
-    db.execute("SELECT * FROM pokemon WHERE id = ?", pk_id) do |row|
-      Pokemon.instance_variable_set(:@id, row[0])
-      Pokemon.instance_variable_set(:@name, row[1])
-      Pokemon.instance_variable_set(:@type, row[2])
-    end
+    pokemon = db.execute("SELECT * FROM pokemon WHERE id = ?", pk_id)
+      Pokemon.instance_variable_set(:@id, pokemon[0][0])
+      Pokemon.instance_variable_set(:@name, pokemon[0][1])
+      Pokemon.instance_variable_set(:@type, pokemon[0][2])
   end
 end
