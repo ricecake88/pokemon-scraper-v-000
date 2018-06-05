@@ -8,7 +8,7 @@ class Pokemon
   end
   
   def save(name, type)
-    @database.execute("INSERT INTO ?(name, type) VALUES(?,?);", @name, @type, @database)
+    @database.execute("INSERT INTO ?(name, type) VALUES(?,?);", @name, @type, @db)
   end
   
   def find(pk_id)
