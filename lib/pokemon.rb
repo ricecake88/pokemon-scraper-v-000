@@ -9,11 +9,10 @@ def initialize(name: name, type: type, db: db)
 end
 '''
 
-  def initialize(name: name, type: type, db: db)
-    local_variables.each do |k|
-      v = eval(k.to_s)
-      instance_variable_set("@#{k}", v) unless v.nil?
-    end
+  def initialize(id: id, name: name, type: type, db: db)
+    @name = name
+    @type = type
+    @db = db
   end
 
   def self.save(name, type, db)
