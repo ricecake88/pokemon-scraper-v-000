@@ -12,6 +12,7 @@ class Pokemon
   end
   
   def self.find(pk_id)
-    database_execution.execute("SELECT * FROM ? WHERE id = ?;", @db, pk_id)
+    pogo = database_execution.execute("SELECT * FROM ? WHERE id = ?;", @db, pk_id)
+    pogo
   end
 end
