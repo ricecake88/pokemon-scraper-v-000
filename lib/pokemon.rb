@@ -1,13 +1,5 @@
 class Pokemon
-
-'''
-def initialize(name: name, type: type, db: db)
-  local_variables.each do |k|
-    v = eval(k.to_s)
-    instance_variable_set("@#{k}", v) unless v.nil?
-  end
-end
-'''
+  attr_accessor :name, :type, :db
 
   def initialize(id: nil, name: nil, type: nil, db: nil)
     @name = name
