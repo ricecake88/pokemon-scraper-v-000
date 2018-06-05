@@ -1,17 +1,13 @@
 class Pokemon
   attr_accessor :name, :type, :db, :id
 
-  '''def initialize(id: id, name: name, type: type, db: db)
+  def initialize(id: id, name: name, type: type, db: db)
     @id = id
     @name = name
     @type = type
     @db = db
-  end'''
-def initialize(**options)
-  attributes.each do |k,v|
-    instance_variable_set("@#{k}", v) unless v.nil?
   end
-end
+
   def self.save(name, type, db)
     db.execute("INSERT INTO pokemon(name, type) VALUES(?,?)", name, type)
   end
