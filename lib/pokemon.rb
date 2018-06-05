@@ -1,8 +1,8 @@
 class Pokemon
   def initialize(name, type, db)
-    @name = name
-    @type = type
-    @db = db
+    self.name = name
+    self.type = type
+    self.db = db
   end
   
   def self.save(name, type, db)
