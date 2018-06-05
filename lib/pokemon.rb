@@ -4,7 +4,7 @@ class Pokemon
 #    attributes.each {|key,value| self.send(("#{key}="), value)}
 #  end
 
-def initialize(keywords: nil, name: nil, type: nil, database: nil)
+def initialize(name: nil, type: nil, database: nil)
   local_variables.each do |k|
     v = eval(k.to_s)
     instance_variable_set("@#{k}", v) unless v.nil?
