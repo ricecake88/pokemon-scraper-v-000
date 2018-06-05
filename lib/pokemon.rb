@@ -12,7 +12,8 @@ class Pokemon
   end
   
   def self.find(pk_id, db)
-    pogo = db.execute("SELECT * FROM pokemon WHERE id = ?;", pk_id)
-    pogo
+    db.execute("SELECT * FROM pokemon WHERE id = ?;", pk_id) do |row|
+      row[]
+    
   end
 end
