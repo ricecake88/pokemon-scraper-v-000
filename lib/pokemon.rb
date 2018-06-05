@@ -9,7 +9,7 @@ def initialize(name: name, type: type, db: db)
 end
 '''
 
-  def initialize(id: nil, name: nil, type: nil, db: nil)
+  def initialize(name: nil, type: nil, db: nil)
     @name = name
     @type = type
     @db = db
